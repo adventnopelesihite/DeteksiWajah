@@ -1,4 +1,6 @@
 import cv2 #pemanggilan library
+import webbrowser
+
 
 img = cv2.imread('BpkJk.jpg') #untuk membaca file Foto
 
@@ -13,14 +15,20 @@ for (x,y,w,h) in wajah: #perulangan For untuk pembacaan atau perulangan pada fot
 
     cv_warna = img[y:y+h, x:x+w]
     cv_gray = gray[y:y+h, x:x+w]
+    
+    
 
-cv2.imshow('Foto Normal', img) #untuk memunculkan foto yang kita baca tadi
-cv2.waitKey(0) #tidak ada jeda, langsung dimunculkan
+cv2.imshow('Foto Deteksi Wajah', img) #untuk memunculkan foto yang kita baca tadi
 
-result=cv2.imwrite('E:\Intership 2\OpenCV-Indonesia-master\Deteksi-Wajah', img)
+result=cv2.imwrite('foto.jpg', img)
 if result==True:
   print('File saved successfully')
 else:
   print('Error in saving file')
-
+  
+cv2.waitKey(0) #tidak ada jeda, langsung dimunculkan
+webbrowser.open("index.html")
 cv2.destroyAllWindows() #setelah integrasi diatas berhasil,deteksinya dijalankan
+
+
+
