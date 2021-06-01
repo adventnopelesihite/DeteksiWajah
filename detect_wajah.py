@@ -20,7 +20,7 @@ for (x,y,w,h) in wajah: #perulangan For untuk pembacaan atau perulangan pada fot
 
 cv2.imshow('Foto Deteksi Wajah', img) #untuk memunculkan foto yang kita baca tadi
 
-result=cv2.imwrite('foto.jpg', img)
+result=cv2.imwrite('static/foto.jpg', img)
 if result==True:
   print('File saved successfully')
 else:
