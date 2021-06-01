@@ -16,4 +16,11 @@ for (x,y,w,h) in wajah: #perulangan For untuk pembacaan atau perulangan pada fot
 
 cv2.imshow('Foto Normal', img) #untuk memunculkan foto yang kita baca tadi
 cv2.waitKey(0) #tidak ada jeda, langsung dimunculkan
+
+result=cv2.imwrite('E:\Intership 2\OpenCV-Indonesia-master\Deteksi-Wajah', img)
+if result==True:
+  print('File saved successfully')
+else:
+  print('Error in saving file')
+
 cv2.destroyAllWindows() #setelah integrasi diatas berhasil,deteksinya dijalankan
