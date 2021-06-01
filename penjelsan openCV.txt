@@ -1,0 +1,5 @@
+openCV adalah library dari pyhon, untuk keperluan 
+image procesing seperti(mendeteksi wajah 
+atau mendeteksi objeck yang lainnya menggunakan openCV)
+
+ 
