@@ -3,7 +3,6 @@
 <h2>upload file</h2>
 
 <body>
-
 <p>
         {% with pesan = get_flashed_messages() %}
         {% if pesan %}
@@ -19,15 +18,14 @@
 		<img src="{{ url_for('static', filename='uploads/'+filename) }}">
     {% endif %}
 
-<form method="post" action="/" enctype="multipart/form-data">
-    <dl>
-		<p>
-			<input type="file" name="file" autocomplete="off" required>
-		</p>
-    </dl>
-    <p>
-		<input type="submit" value="Submit">
-	</p>
-</form>
-
+  <form method="post" action="/" enctype="multipart/form-data">
+      <dl>
+      <p>
+        <input type="file" name="file" autocomplete="off" required>
+      </p>
+      </dl>
+      <p>
+      <input type="submit" value="Submit">
+    </p>
+  </form>
 </body>
