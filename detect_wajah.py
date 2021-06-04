@@ -29,6 +29,3 @@ else:
 cv2.waitKey(0) #tidak ada jeda, langsung dimunculkan
 webbrowser.open("index.html")
 cv2.destroyAllWindows() #setelah integrasi diatas berhasil,deteksinya dijalankan
-
-
-

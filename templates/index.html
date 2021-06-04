@@ -1,15 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<!doctype html>
+<title>Flask Upload </title>
+<h2>upload file</h2>
 
 <body>
-  <img src="{{ url_for('static', filename='foto.jpg') }}">
-</body>
 
-</html>
+<p>
+        {% with pesan = get_flashed_messages() %}
+        {% if pesan %}
+            <ul class=flashes>
+            {% for message in pesan %}
+            <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+        {% endwith %}
+    </p>
+    {% if filename %}
+		<img src="{{ url_for('static', filename='uploads/'+filename) }}">
+    {% endif %}
+
+<form method="post" action="/" enctype="multipart/form-data">
+    <dl>
+		<p>
+			<input type="file" name="file" autocomplete="off" required>
+		</p>
+    </dl>
+    <p>
+		<input type="submit" value="Submit">
+	</p>
+</form>
+</body>
