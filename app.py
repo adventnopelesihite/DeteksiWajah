@@ -34,7 +34,7 @@ def post():
 		file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 		
 		flash('Image successfully uploaded and displayed below')
-		flash('Namanya Jokowi')
+		flash('Jokowi')
 		return render_template('index.html', filename=filename)
 	else:
 		flash('Allowed image types are -> png, jpg, jpeg, gif')
